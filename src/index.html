@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Numbers Quiz</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <main>
+      <header class="text-center">
+        <h1 class="mb-3">Numbers Quiz</h1>
+
+        <p>Say the number out loud and type/submit the number</p>
+      </header>
+
+      <section id="stats" class="mt-3 text-center">
+        <header class="border p-2">
+          <h2>Statistics</h2>
+        </header>
+
+        <div>
+          <table class="mx-auto game-text">
+            <thead>
+              <tr>
+                <th>Guesses</th>
+                <th>Correct</th>
+                <th>Incorrect</th>
+                <th>Accuracy</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td id="guesses"></td>
+                <td id="correct"></td>
+                <td id="incorrect"></td>
+                <td><span id="accuracy"></span>%</td>
+            </tbody>
+          </table>
+        </div>
+
+        <div id="notifications" class="mt-3">
+          <!-- <span id="win-msg" class="game-text" hidden>You Win!</span> -->
+          <span id="correct-msg" class="game-text" hidden>Correct!</span>
+          <span id="incorrect-msg" class="game-text" hidden>Incorrect</span>
+        </div>
+      </section>
+
+      <section class="text-center">
+        <div class="mt-3">
+          <header class="border p-2">
+            <h2>Question</h2>
+          </header>
+
+          <span id="question" class="game-text"></span>
+        </div>
+
+        <div class="mt-3">
+          <header class="border p-2">
+            <h2>Answer</h2>
+          </header>
+
+          <input id="answer-input" type="text"  class="game-text" onchange="guess();">
+        </div>
+
+        <div class="mt-3">
+          <button onclick="reset();">Reset</button>
+          <button onclick="guess();">Submit</button>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+
